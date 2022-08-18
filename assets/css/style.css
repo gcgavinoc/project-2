@@ -1,0 +1,98 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.lives-area {
+    height: 600px;
+    float: left;
+    width: 20%;
+}
+
+.lives-area p {
+    position: relative;
+    top: 50%;
+}
+
+.controls-area {
+    height: 600px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: blue;
+}
+
+.rock {
+    position: absolute;
+    top: 10%;
+    right: 43%;
+}
+
+.paper {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.scissors {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+}
+
+.lizard {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+.spock {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.my-choice {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+}
+
+.comp-choice {
+    position: absolute;
+    top: 40%;
+    right: 25%;
+}
+
+.score-area {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.difficulty-area {
+    height: 600px;
+    float: right;
+    width: 20%;
+}
+
+.difficulty-area p {
+    position: relative;
+    top: 50%;
+}
+
+/* Buttons */
+
+.selection {
+    padding-top: 10px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid;
+    width: 100px;
+    height: 100px;
+    font-size: 3.2rem;
+    margin: 0 30px;
+    transition: all 0.5s;
+}
