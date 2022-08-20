@@ -12,8 +12,20 @@ body {
 }
 
 .lives-area p {
+    border: 3px solid;
+    font-size: 2rem;
     position: relative;
-    top: 50%;
+    top: 35%;
+    left: 23%;
+    width: 150px;
+}
+
+#lives {
+    border: 2px solid;
+    border-radius: 50%;
+    font-size: 5rem;
+    position: relative;
+    top: 40%;
 }
 
 .controls-area {
@@ -22,13 +34,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    background-color: blue;
 }
 
 .rock {
     position: absolute;
     top: 10%;
-    right: 43%;
+    left: 41%;
 }
 
 .paper {
@@ -70,7 +81,7 @@ body {
 #shoot {
     position: absolute;
     top: 50%;
-    left: 48%;
+    left: 47%;
 }
 
 .comp-choice {
@@ -103,6 +114,11 @@ body {
 .difficulty-area p {
     position: relative;
     top: 50%;
+}
+
+.difficulty-tracker {
+    border: 2px solid;
+    width: 130px;
 }
 
 /* Buttons */
