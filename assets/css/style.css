@@ -5,12 +5,14 @@ body {
     position: relative;
 }
 
+/* Lives left tracker area*/
 .lives-area {
     height: 600px;
     float: left;
     width: 20%;
 }
 
+/* Lives left text */
 .lives-area p {
     border: 3px solid;
     font-size: 2rem;
@@ -20,6 +22,7 @@ body {
     width: 150px;
 }
 
+/* Number of lives left tracker */
 #lives {
     border: 2px solid;
     border-radius: 50%;
@@ -28,6 +31,7 @@ body {
     top: 40%;
 }
 
+/* Game selection buttons */
 .controls-area {
     height: 600px;
     width: 60%;
@@ -66,36 +70,42 @@ body {
     left: 10%;
 }
 
+/* Player selection area */
 .my-choice {
     position: absolute;
     top: 40%;
     left: 25%;
 }
 
+/* Label for player selection area */
 #you {
     position: absolute;
     top: 60%;
     left: 32%;
 }
 
+/* Shoot! button */
 #shoot {
     position: absolute;
     top: 50%;
     left: 47%;
 }
 
+/* Computer selection area */
 .comp-choice {
     position: absolute;
     top: 40%;
     right: 25%;
 }
 
+/* Label for computer selection area */
 #computer {
     position: absolute;
     top: 60%;
     right: 30%;
 }
 
+/* Score tracker */
 .score-area {
     position: absolute;
     top: 75%;
@@ -105,6 +115,7 @@ body {
     margin-right: auto;
 }
 
+/* Win 3, Win 5, Win 10 difficulty rules text */
 .difficulty-area {
     height: 600px;
     float: right;
@@ -120,6 +131,7 @@ body {
     margin-top: 80px;
 }
 
+/* Easy, Medium, Hard difficulty table */
 .difficulty-tracker {
     border: 2px solid;
     width: 250px;
@@ -134,7 +146,7 @@ table td {
     border-right: 2px solid;
 }
 
-/* Buttons */
+/* All game selection buttons */
 
 .selection {
     padding-top: 10px;
