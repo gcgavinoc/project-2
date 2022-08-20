@@ -25,6 +25,14 @@ h1 {
     font-size: 3rem;
 }
 
+/* Help button */
+#help-button {
+    position: absolute;
+    top: -8%;
+    right: 1%;
+    font-size: 2rem;
+}
+
 /* Lives left tracker area*/
 .lives-area {
     height: 600px;
@@ -158,9 +166,9 @@ h1 {
     border: 2px solid;
     width: 290px;
     transform: rotate(90deg);
-    position: relative;
-    top: 8%;
-    right: -30%;
+    position: absolute;
+    top: 55%;
+    right: -5%;
     font-size: 2rem;
     background-color: white;
 }
