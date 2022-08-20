@@ -113,12 +113,25 @@ body {
 
 .difficulty-area p {
     position: relative;
-    top: 50%;
+    top: 33%;
+}
+
+.difficulty-area p + p {
+    margin-top: 80px;
 }
 
 .difficulty-tracker {
     border: 2px solid;
-    width: 130px;
+    width: 250px;
+    transform: rotate(90deg);
+    position: relative;
+    top: 8%;
+    right: -30%;
+    font-size: 2rem;
+}
+
+table td {
+    border-right: 2px solid;
 }
 
 /* Buttons */
