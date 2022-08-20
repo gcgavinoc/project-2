@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+    font-family: 'DynaPuff', cursive;
 }
 
 /* Video background */
@@ -18,6 +19,12 @@ body {
   z-index: -1;
 }
 
+/* Page heading */
+
+h1 {
+    font-size: 3rem;
+}
+
 /* Lives left tracker area*/
 .lives-area {
     height: 600px;
@@ -30,9 +37,10 @@ body {
     border: 3px solid;
     font-size: 2rem;
     position: relative;
-    top: 35%;
+    top: 28%;
     left: 23%;
     width: 150px;
+    background-color: white;
 }
 
 /* Number of lives left tracker */
@@ -41,7 +49,8 @@ body {
     border-radius: 50%;
     font-size: 5rem;
     position: relative;
-    top: 40%;
+    top: 32%;
+    background-color: white;
 }
 
 /* Game selection buttons */
@@ -147,12 +156,13 @@ body {
 /* Easy, Medium, Hard difficulty table */
 .difficulty-tracker {
     border: 2px solid;
-    width: 250px;
+    width: 290px;
     transform: rotate(90deg);
     position: relative;
     top: 8%;
     right: -30%;
     font-size: 2rem;
+    background-color: white;
 }
 
 table td {
