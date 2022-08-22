@@ -35,8 +35,12 @@ function fillChoiceSpock(){
  */
 let compChoice = document.getElementById('comp-choice');
 let shoot = document.getElementById('shoot');
-shoot.addEventListener("click", computerChoice);
+shoot.addEventListener('click',() => {    
+    computerChoice();
+    checkWinner();    
+});
 function computerChoice() {
+    shoot.innerHTML = 'Play Again!'
     const randNum = Math.floor(Math.random() * 5) + 1;
 
     switch(randNum){
@@ -63,13 +67,49 @@ function computerChoice() {
  * on shoot button click
  */
 
+function checkWinner() {
+    if(playerChoice.innerHTML = rock.innerHTML){
+        if(compChoice.innerHTML == scissors.innerHTML){
+            incrementPlayerScore();
+            playerChoice.style.backgroundColor = 'green';
+            compChoice.style.backgroundColor = 'red';
+        }else if(compChoice.innerHTML == lizard.innerHTML){
+            incrementPlayerScore();
+            playerChoice.style.backgroundColor = 'green';
+            compChoice.style.backgroundColor = 'red';
+        }else if(compChoice.innerHTML == paper.innerHTML){
+            incrementCompScore();
+            playerChoice.style.backgroundColor = 'red';
+            compChoice.style.backgroundColor = 'green';
+        }else if(compChoice.innerHTML == spock.innerHTML){
+            incrementCompScore();
+            playerChoice.style.backgroundColor = 'red';
+            compChoice.style.backgroundColor = 'green';
+        }else if(compChoice.innerHTML == rock.innerHTML){
+            playerChoice.style.backgroundColor = 'yellow';
+            compChoice.style.backgroundColor = 'yellow';
+        }
+    }
+}
 /**
  * Function for incrementing player score
  */
+ function incrementPlayerScore() {
+
+    let oldScore = parseInt(document.getElementById('playerScore').innerText);
+    document.getElementById('playerScore').innerText = ++oldScore;
+}
 
 /**
  * Function for incrementing computer score and reducing lives number
  */
+ function incrementCompScore() {
+
+    let oldScore = parseInt(document.getElementById('compScore').innerText);
+    document.getElementById('compScore').innerText = ++oldScore;
+    let oldLives = parseInt(document.getElementById('lives').innerText);
+    document.getElementById('lives').innerText = --oldLives;
+}
 
 /**
  * Function for lose screen when lives equal 0
