@@ -33,6 +33,30 @@ function fillChoiceSpock(){
 /**
  * Function for filling computer selection area on shoot button click
  */
+let compChoice = document.getElementById('comp-choice');
+let shoot = document.getElementById('shoot');
+shoot.addEventListener("click", computerChoice);
+function computerChoice() {
+    const randNum = Math.floor(Math.random() * 5) + 1;
+
+    switch(randNum){
+        case 1:
+            compChoice.innerHTML = rock.innerHTML;
+            break;
+        case 2:
+            compChoice.innerHTML = paper.innerHTML;
+            break;
+        case 3:
+            compChoice.innerHTML = scissors.innerHTML;
+            break;
+        case 4:
+            compChoice.innerHTML = lizard.innerHTML;
+            break;
+        case 5:
+            compChoice.innerHTML = spock.innerHTML;
+            break;
+    }
+}
 
 /**
  * Function for checking if player selection area beats computer selection area
