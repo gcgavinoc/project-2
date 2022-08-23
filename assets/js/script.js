@@ -1,4 +1,12 @@
 /**
+ * Setting difficulty to easy on page load
+ */
+ window.addEventListener("load", function() {
+    document.getElementById('easy').style.backgroundColor = 'green';
+ });
+
+
+/**
  * Function for putting selection choice into player selection area
  * on selection button click
  */
@@ -119,15 +127,91 @@
              playerChoice.style.backgroundColor = 'yellow';
              compChoice.style.backgroundColor = 'yellow';
          }
-     }
+     }else if(playerChoice.innerHTML == scissors.innerHTML){
+        if(compChoice.innerHTML == paper.innerHTML){
+            incrementPlayerScore();
+            playerChoice.style.backgroundColor = 'green';
+            compChoice.style.backgroundColor = 'red';
+        }else if(compChoice.innerHTML == lizard.innerHTML){
+            incrementPlayerScore();
+            playerChoice.style.backgroundColor = 'green';
+            compChoice.style.backgroundColor = 'red';
+        }else if(compChoice.innerHTML == rock.innerHTML){
+            incrementCompScore();
+            playerChoice.style.backgroundColor = 'red';
+            compChoice.style.backgroundColor = 'green';
+        }else if(compChoice.innerHTML == spock.innerHTML){
+            incrementCompScore();
+            playerChoice.style.backgroundColor = 'red';
+            compChoice.style.backgroundColor = 'green';
+        }else if(compChoice.innerHTML == scissors.innerHTML){
+            playerChoice.style.backgroundColor = 'yellow';
+            compChoice.style.backgroundColor = 'yellow';
+        }
+    }else if(playerChoice.innerHTML == lizard.innerHTML){
+        if(compChoice.innerHTML == spock.innerHTML){
+            incrementPlayerScore();
+            playerChoice.style.backgroundColor = 'green';
+            compChoice.style.backgroundColor = 'red';
+        }else if(compChoice.innerHTML == paper.innerHTML){
+            incrementPlayerScore();
+            playerChoice.style.backgroundColor = 'green';
+            compChoice.style.backgroundColor = 'red';
+        }else if(compChoice.innerHTML == rock.innerHTML){
+            incrementCompScore();
+            playerChoice.style.backgroundColor = 'red';
+            compChoice.style.backgroundColor = 'green';
+        }else if(compChoice.innerHTML == scissors.innerHTML){
+            incrementCompScore();
+            playerChoice.style.backgroundColor = 'red';
+            compChoice.style.backgroundColor = 'green';
+        }else if(compChoice.innerHTML == lizard.innerHTML){
+            playerChoice.style.backgroundColor = 'yellow';
+            compChoice.style.backgroundColor = 'yellow';
+        }
+    }else if(playerChoice.innerHTML == spock.innerHTML){
+        if(compChoice.innerHTML == scissors.innerHTML){
+            incrementPlayerScore();
+            playerChoice.style.backgroundColor = 'green';
+            compChoice.style.backgroundColor = 'red';
+        }else if(compChoice.innerHTML == rock.innerHTML){
+            incrementPlayerScore();
+            playerChoice.style.backgroundColor = 'green';
+            compChoice.style.backgroundColor = 'red';
+        }else if(compChoice.innerHTML == paper.innerHTML){
+            incrementCompScore();
+            playerChoice.style.backgroundColor = 'red';
+            compChoice.style.backgroundColor = 'green';
+        }else if(compChoice.innerHTML == lizard.innerHTML){
+            incrementCompScore();
+            playerChoice.style.backgroundColor = 'red';
+            compChoice.style.backgroundColor = 'green';
+        }else if(compChoice.innerHTML == spock.innerHTML){
+            playerChoice.style.backgroundColor = 'yellow';
+            compChoice.style.backgroundColor = 'yellow';
+        }
+    }
  }
  /**
   * Function for incrementing player score
+  * and changing difficulty level on reaching certain player score level
   */
   function incrementPlayerScore() {
  
      let oldScore = parseInt(document.getElementById('playerScore').innerText);
      document.getElementById('playerScore').innerText = ++oldScore;
+
+     if (oldScore < 2) {
+        document.getElementById('easy').style.backgroundColor = 'green';
+    }else if (oldScore > 2 && oldScore < 5) {
+        document.getElementById('easy').style.backgroundColor = 'white';
+        document.getElementById('medium').style.backgroundColor = 'yellow';
+    }else if (oldScore > 4) {
+        document.getElementById('easy').style.backgroundColor = 'white';
+        document.getElementById('medium').style.backgroundColor = 'white';
+        document.getElementById('hard').style.backgroundColor = 'red';
+    }
+
  }
  
  /**
@@ -139,8 +223,9 @@
      document.getElementById('compScore').innerText = ++oldScore;
      let oldLives = parseInt(document.getElementById('lives').innerText);
      document.getElementById('lives').innerText = --oldLives;
+
  }
- 
+
  /**
   * Function for lose screen when lives equal 0
   */
