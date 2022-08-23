@@ -76,11 +76,47 @@ h1 {
     left: 41%;
 }
 
+#rock-tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+}
+
+#rock:hover #rock-tooltip {
+    visibility: visible;
+}
+
 #paper {
     position: absolute;
     top: 10%;
     right: 10%;
 }
+
+#paper-tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+  }
+  
+  #paper:hover #paper-tooltip {
+      visibility: visible;
+  }
 
 #scissors {
     position: absolute;
@@ -88,17 +124,71 @@ h1 {
     bottom: 10%;
 }
 
+#scissors-tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+  }
+  
+  #scissors:hover #scissors-tooltip {
+      visibility: visible;
+  }
+
 #lizard {
     position: absolute;
     bottom: 10%;
     left: 10%;
 }
 
+#lizard-tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+  }
+  
+  #lizard:hover #lizard-tooltip {
+      visibility: visible;
+  }
+
 #spock {
     position: absolute;
     top: 10%;
     left: 10%;
 }
+
+#spock-tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+  }
+  
+  #spock:hover #spock-tooltip {
+      visibility: visible;
+  }
 
 /* Player selection area */
 #my-choice {
