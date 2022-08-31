@@ -48,7 +48,7 @@
      checkWinner();    
  });
  function computerChoice() {
-     if(shoot.innerText == 'Shoot!'){
+     if(shoot.innerText == 'Shoot!' && playerChoice.innerHTML !== ''){
  
      shoot.innerText = 'Play Again!'
      const randNum = Math.floor(Math.random() * 5) + 1;
@@ -85,7 +85,9 @@
   */
  
  function checkWinner() {
-     if(playerChoice.innerHTML == rock.innerHTML){
+     if(playerChoice.innerHTML == ''){
+         alert('Please make a selection before clicking shoot!')
+     }else if(playerChoice.innerHTML == rock.innerHTML){
          if(compChoice.innerHTML == scissors.innerHTML){
              incrementPlayerScore();
              playerChoice.style.backgroundColor = 'green';
