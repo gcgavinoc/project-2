@@ -70,6 +70,8 @@
              compChoice.innerHTML = spock.innerHTML;
              break;
      }
+     }else if (playerChoice.innerHTML == '' && shoot.innerText == 'Shoot!'){
+         alert('Please make a selection before clicking Shoot!');
      }else {
          playerChoice.innerHTML = '';
          playerChoice.style.backgroundColor = 'white';
@@ -85,9 +87,7 @@
   */
  
  function checkWinner() {
-     if(playerChoice.innerHTML == ''){
-         alert('Please make a selection before clicking shoot!')
-     }else if(playerChoice.innerHTML == rock.innerHTML){
+      if(playerChoice.innerHTML == rock.innerHTML){
          if(compChoice.innerHTML == scissors.innerHTML){
              incrementPlayerScore();
              playerChoice.style.backgroundColor = 'green';
@@ -202,18 +202,6 @@
  
      let oldScore = parseInt(document.getElementById('playerScore').innerText);
      document.getElementById('playerScore').innerText = ++oldScore;
-
-     if (oldScore < 2) {
-        document.getElementById('easy').style.backgroundColor = 'green';
-    }else if (oldScore > 2 && oldScore < 5) {
-        document.getElementById('easy').style.backgroundColor = 'white';
-        document.getElementById('medium').style.backgroundColor = 'yellow';
-    }else if (oldScore > 4) {
-        document.getElementById('easy').style.backgroundColor = 'white';
-        document.getElementById('medium').style.backgroundColor = 'white';
-        document.getElementById('hard').style.backgroundColor = 'red';
-    }
-
  }
  
  /**
