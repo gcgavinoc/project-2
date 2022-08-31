@@ -46,9 +46,14 @@ h1 {
     list-style: none;
 }
 
+#the-rules {
+    position: relative;
+    right: 3%;
+}
+
 #easy-label {
     position: absolute;
-    top: 79%;
+    top: 69%;
     left: 10%;
     color: green;
 }
@@ -69,7 +74,7 @@ h1 {
 
 #hard-label {
     position: absolute;
-    top: 79%;
+    top: 69%;
     right: 10%;
     color: red;
 }
@@ -79,7 +84,15 @@ h1 {
     right: 5%;
     background-color: red;
 }
-
+/* Play button to hide rules window */
+#play-button {
+    position: relative;
+    width: 60px;
+    border: 2px solid;
+    bottom: 0;
+    left: 45%;
+    font-size: 1.5rem;
+}
 .difficulty-button {
     padding-top: 10px;
     border-radius: 50%;
