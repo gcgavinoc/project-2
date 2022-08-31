@@ -1,9 +1,23 @@
 /**
- * Setting difficulty to easy on page load
+ * Set number of lives on difficulty button click
  */
- window.addEventListener("load", function() {
-    document.getElementById('easy').style.backgroundColor = 'green';
- });
+
+/**
+ * Hide rules window after play button click
+ */
+window.onload = function(){
+    document.getElementById('rules').style.visibility = 'visible';
+}
+document.getElementById('play-button').onclick = function(){
+    document.getElementById('rules').style.visibility = 'hidden';
+}
+document.getElementById('help-button').onclick = function(){
+    document.getElementById('rules').style.visibility = 'visible';
+}
+
+/**
+ * Setting difficulty after selection is made on rules window
+ */
 
 
 /**
