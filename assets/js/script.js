@@ -56,18 +56,43 @@ document.getElementById('help-button').onclick = function(){
  
  function fillChoiceRock(){
      playerChoice.innerHTML = rock.innerHTML;
+     rock.style.backgroundColor = 'yellow'
+     paper.style.backgroundColor = 'white'
+     scissors.style.backgroundColor = 'white'
+     lizard.style.backgroundColor = 'white'
+     spock.style.backgroundColor = 'white'
  }
  function fillChoicePaper(){
      playerChoice.innerHTML = paper.innerHTML;
+     paper.style.backgroundColor = 'yellow'
+     rock.style.backgroundColor = 'white'
+     scissors.style.backgroundColor = 'white'
+     lizard.style.backgroundColor = 'white'
+     spock.style.backgroundColor = 'white'
  }
  function fillChoiceScissors(){
      playerChoice.innerHTML = scissors.innerHTML;
+     scissors.style.backgroundColor = 'yellow'
+     paper.style.backgroundColor = 'white'
+     rock.style.backgroundColor = 'white'
+     lizard.style.backgroundColor = 'white'
+     spock.style.backgroundColor = 'white'
  }
  function fillChoiceLizard(){
      playerChoice.innerHTML = lizard.innerHTML;
+     lizard.style.backgroundColor = 'yellow'
+     paper.style.backgroundColor = 'white'
+     scissors.style.backgroundColor = 'white'
+     rock.style.backgroundColor = 'white'
+     spock.style.backgroundColor = 'white'
  }
  function fillChoiceSpock(){
      playerChoice.innerHTML = spock.innerHTML;
+     spock.style.backgroundColor = 'yellow'
+     paper.style.backgroundColor = 'white'
+     scissors.style.backgroundColor = 'white'
+     lizard.style.backgroundColor = 'white'
+     rock.style.backgroundColor = 'white'
  }
  
  /**
