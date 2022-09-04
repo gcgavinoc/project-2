@@ -16,17 +16,18 @@ document.getElementById('hard-choice').onclick = function(){
 window.onload = function(){
     document.getElementById('rules').style.visibility = 'visible';
 }
+
 document.getElementById('play-button').onclick = function(){
+if (document.getElementById('lives').innerHTML !== 'Choose'){
     document.getElementById('rules').style.visibility = 'hidden';
+}else {
+    alert('Please choose a difficulty')
 }
+}
+
 document.getElementById('help-button').onclick = function(){
     document.getElementById('rules').style.visibility = 'visible';
 }
-
-/**
- * Setting difficulty after selection is made on rules window
- */
-
 
 /**
  * Function for putting selection choice into player selection area
@@ -239,9 +240,11 @@ document.getElementById('help-button').onclick = function(){
  }
 
  /**
-  * Function for lose screen when lives equal 0
+  * Win screen appears when player score equals 10
+  * or lose screen appears when lives equal 0
   */
- 
- /**
-  * Function for win screen when computer score reaches 18
-  */ 
+if (document.getElementById('playerScore').innerHTML == '10'){
+    document.getElementById('win-screen').style.visibility = 'visible';
+}else if (document.getElementById('lives').innerHTML == '0'){
+    document.getElementById('lose-screen').style.visibility = 'visible';
+} 
