@@ -225,6 +225,9 @@ document.getElementById('help-button').onclick = function(){
  
      let oldScore = parseInt(document.getElementById('playerScore').innerText);
      document.getElementById('playerScore').innerText = ++oldScore;
+     if (oldScore === 10){
+        document.getElementById('win-screen').style.visibility = 'visible';
+     }
  }
  
  /**
@@ -236,6 +239,9 @@ document.getElementById('help-button').onclick = function(){
      document.getElementById('compScore').innerText = ++oldScore;
      let oldLives = parseInt(document.getElementById('lives').innerText);
      document.getElementById('lives').innerText = --oldLives;
+     if (oldLives === 0){
+        document.getElementById('lose-screen').style.visibility = 'visible';
+     }
 
  }
 
@@ -243,8 +249,3 @@ document.getElementById('help-button').onclick = function(){
   * Win screen appears when player score equals 10
   * or lose screen appears when lives equal 0
   */
-if (document.getElementById('playerScore').innerHTML == '10'){
-    document.getElementById('win-screen').style.visibility = 'visible';
-}else if (document.getElementById('lives').innerHTML == '0'){
-    document.getElementById('lose-screen').style.visibility = 'visible';
-} 
