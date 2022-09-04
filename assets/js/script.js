@@ -3,12 +3,21 @@
  */
 document.getElementById('easy-choice').onclick = function(){
     document.getElementById('lives').innerHTML = '20'
+    document.getElementById('easy').style.backgroundColor = 'green'
+    document.getElementById('medium').style.backgroundColor = 'white'
+    document.getElementById('hard').style.backgroundColor = 'white'
 }
 document.getElementById('medium-choice').onclick = function(){
     document.getElementById('lives').innerHTML = '15'
+    document.getElementById('medium').style.backgroundColor = 'yellow'
+    document.getElementById('easy').style.backgroundColor = 'white'
+    document.getElementById('hard').style.backgroundColor = 'white'
 }
 document.getElementById('hard-choice').onclick = function(){
     document.getElementById('lives').innerHTML = '10'
+    document.getElementById('hard').style.backgroundColor = 'red'
+    document.getElementById('easy').style.backgroundColor = 'white'
+    document.getElementById('medium').style.backgroundColor = 'white'
 }
 /**
  * Hide rules window after play button click
