@@ -1,7 +1,15 @@
 /**
  * Set number of lives on difficulty button click
  */
-
+document.getElementById('easy-choice').onclick = function(){
+    document.getElementById('lives').innerHTML = '20'
+}
+document.getElementById('medium-choice').onclick = function(){
+    document.getElementById('lives').innerHTML = '15'
+}
+document.getElementById('hard-choice').onclick = function(){
+    document.getElementById('lives').innerHTML = '10'
+}
 /**
  * Hide rules window after play button click
  */
