@@ -2,22 +2,31 @@
  * Set number of lives on difficulty button click
  */
 document.getElementById('easy-choice').onclick = function(){
-    document.getElementById('lives').innerHTML = '20'
-    document.getElementById('easy').style.backgroundColor = 'green'
-    document.getElementById('medium').style.backgroundColor = 'white'
-    document.getElementById('hard').style.backgroundColor = 'white'
+    document.getElementById('lives').innerHTML = '20';
+    document.getElementById('easy-choice').style.backgroundColor = 'green';
+    document.getElementById('medium-choice').style.backgroundColor = 'white';
+    document.getElementById('hard-choice').style.backgroundColor = 'white';
+    document.getElementById('easy').style.backgroundColor = 'green';
+    document.getElementById('medium').style.backgroundColor = 'white';
+    document.getElementById('hard').style.backgroundColor = 'white';
 }
 document.getElementById('medium-choice').onclick = function(){
-    document.getElementById('lives').innerHTML = '15'
-    document.getElementById('medium').style.backgroundColor = 'yellow'
-    document.getElementById('easy').style.backgroundColor = 'white'
-    document.getElementById('hard').style.backgroundColor = 'white'
+    document.getElementById('lives').innerHTML = '15';
+    document.getElementById('medium-choice').style.backgroundColor = 'orange';
+    document.getElementById('easy-choice').style.backgroundColor = 'white';
+    document.getElementById('hard-choice').style.backgroundColor = 'white';
+    document.getElementById('medium').style.backgroundColor = 'yellow';
+    document.getElementById('easy').style.backgroundColor = 'white';
+    document.getElementById('hard').style.backgroundColor = 'white';
 }
 document.getElementById('hard-choice').onclick = function(){
-    document.getElementById('lives').innerHTML = '10'
-    document.getElementById('hard').style.backgroundColor = 'red'
-    document.getElementById('easy').style.backgroundColor = 'white'
-    document.getElementById('medium').style.backgroundColor = 'white'
+    document.getElementById('lives').innerHTML = '10';
+    document.getElementById('hard-choice').style.backgroundColor = 'red';
+    document.getElementById('easy-choice').style.backgroundColor = 'white';
+    document.getElementById('medium-choice').style.backgroundColor = 'white';
+    document.getElementById('hard').style.backgroundColor = 'red';
+    document.getElementById('easy').style.backgroundColor = 'white';
+    document.getElementById('medium').style.backgroundColor = 'white';
 }
 /**
  * Hide rules window after play button click
@@ -264,7 +273,7 @@ document.getElementById('help-button').onclick = function(){
  
      let oldScore = parseInt(document.getElementById('playerScore').innerText);
      document.getElementById('playerScore').innerText = ++oldScore;
-     if (oldScore === 1){
+     if (oldScore === 10){
         document.getElementById('win-screen').style.visibility = 'visible';
      }
  }
