@@ -135,6 +135,11 @@ document.getElementById('help-button').onclick = function(){
          compChoice.innerHTML = '';
          compChoice.style.backgroundColor = 'white';
          shoot.innerText = 'Shoot!'
+         rock.style.backgroundColor = 'white'
+         paper.style.backgroundColor = 'white'
+         scissors.style.backgroundColor = 'white'
+         lizard.style.backgroundColor = 'white'
+         spock.style.backgroundColor = 'white'
  }
  }
  
@@ -253,19 +258,20 @@ document.getElementById('help-button').onclick = function(){
  }
  /**
   * Function for incrementing player score
-  * and changing difficulty level on reaching certain player score level
+  * and making win screen visible
   */
   function incrementPlayerScore() {
  
      let oldScore = parseInt(document.getElementById('playerScore').innerText);
      document.getElementById('playerScore').innerText = ++oldScore;
-     if (oldScore === 10){
+     if (oldScore === 1){
         document.getElementById('win-screen').style.visibility = 'visible';
      }
  }
  
  /**
-  * Function for incrementing computer score and reducing lives number
+  * Function for incrementing computer score, reducing lives number
+  * and making lose screen appear
   */
   function incrementCompScore() {
  
