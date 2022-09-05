@@ -4,37 +4,41 @@
 document.getElementById('easy-choice').onclick = function(){
     document.getElementById('lives').innerHTML = '20';
     document.getElementById('easy-choice').style.backgroundColor = 'green';
-    document.getElementById('medium-choice').style.backgroundColor = 'white';
-    document.getElementById('hard-choice').style.backgroundColor = 'white';
+    document.getElementById('medium-choice').style.backgroundColor = '';
+    document.getElementById('hard-choice').style.backgroundColor = '';
     document.getElementById('easy').style.backgroundColor = 'green';
-    document.getElementById('medium').style.backgroundColor = 'white';
-    document.getElementById('hard').style.backgroundColor = 'white';
+    document.getElementById('medium').style.backgroundColor = '';
+    document.getElementById('hard').style.backgroundColor = '';
 }
 document.getElementById('medium-choice').onclick = function(){
     document.getElementById('lives').innerHTML = '15';
     document.getElementById('medium-choice').style.backgroundColor = 'orange';
-    document.getElementById('easy-choice').style.backgroundColor = 'white';
-    document.getElementById('hard-choice').style.backgroundColor = 'white';
-    document.getElementById('medium').style.backgroundColor = 'yellow';
-    document.getElementById('easy').style.backgroundColor = 'white';
-    document.getElementById('hard').style.backgroundColor = 'white';
+    document.getElementById('easy-choice').style.backgroundColor = '';
+    document.getElementById('hard-choice').style.backgroundColor = '';
+    document.getElementById('medium').style.backgroundColor = 'orange';
+    document.getElementById('easy').style.backgroundColor = '';
+    document.getElementById('hard').style.backgroundColor = '';
 }
 document.getElementById('hard-choice').onclick = function(){
     document.getElementById('lives').innerHTML = '10';
     document.getElementById('hard-choice').style.backgroundColor = 'red';
-    document.getElementById('easy-choice').style.backgroundColor = 'white';
-    document.getElementById('medium-choice').style.backgroundColor = 'white';
+    document.getElementById('easy-choice').style.backgroundColor = '';
+    document.getElementById('medium-choice').style.backgroundColor = '';
     document.getElementById('hard').style.backgroundColor = 'red';
-    document.getElementById('easy').style.backgroundColor = 'white';
-    document.getElementById('medium').style.backgroundColor = 'white';
+    document.getElementById('easy').style.backgroundColor = '';
+    document.getElementById('medium').style.backgroundColor = '';
 }
 /**
- * Hide rules window after play button click
+ * Make rules window visible on page load
  */
 window.onload = function(){
     document.getElementById('rules').style.visibility = 'visible';
 }
 
+/**
+ * Hide rules window after play button click
+ * or alert if no difficulty selected
+ */
 document.getElementById('play-button').onclick = function(){
 if (document.getElementById('lives').innerHTML !== 'Choose'){
     document.getElementById('rules').style.visibility = 'hidden';
@@ -43,8 +47,14 @@ if (document.getElementById('lives').innerHTML !== 'Choose'){
 }
 }
 
+/**
+ * Make rules window visible on help button click
+ */
 document.getElementById('help-button').onclick = function(){
     document.getElementById('rules').style.visibility = 'visible';
+    document.getElementById('easy-choice').style.pointerEvents = 'none';
+    document.getElementById('medium-choice').style.pointerEvents = 'none';
+    document.getElementById('hard-choice').style.pointerEvents = 'none';
 }
 
 /**
@@ -66,42 +76,42 @@ document.getElementById('help-button').onclick = function(){
  function fillChoiceRock(){
      playerChoice.innerHTML = rock.innerHTML;
      rock.style.backgroundColor = 'yellow'
-     paper.style.backgroundColor = 'white'
-     scissors.style.backgroundColor = 'white'
-     lizard.style.backgroundColor = 'white'
-     spock.style.backgroundColor = 'white'
+     paper.style.backgroundColor = ''
+     scissors.style.backgroundColor = ''
+     lizard.style.backgroundColor = ''
+     spock.style.backgroundColor = ''
  }
  function fillChoicePaper(){
      playerChoice.innerHTML = paper.innerHTML;
      paper.style.backgroundColor = 'yellow'
-     rock.style.backgroundColor = 'white'
-     scissors.style.backgroundColor = 'white'
-     lizard.style.backgroundColor = 'white'
-     spock.style.backgroundColor = 'white'
+     rock.style.backgroundColor = ''
+     scissors.style.backgroundColor = ''
+     lizard.style.backgroundColor = ''
+     spock.style.backgroundColor = ''
  }
  function fillChoiceScissors(){
      playerChoice.innerHTML = scissors.innerHTML;
      scissors.style.backgroundColor = 'yellow'
-     paper.style.backgroundColor = 'white'
-     rock.style.backgroundColor = 'white'
-     lizard.style.backgroundColor = 'white'
-     spock.style.backgroundColor = 'white'
+     paper.style.backgroundColor = ''
+     rock.style.backgroundColor = ''
+     lizard.style.backgroundColor = ''
+     spock.style.backgroundColor = ''
  }
  function fillChoiceLizard(){
      playerChoice.innerHTML = lizard.innerHTML;
      lizard.style.backgroundColor = 'yellow'
-     paper.style.backgroundColor = 'white'
-     scissors.style.backgroundColor = 'white'
-     rock.style.backgroundColor = 'white'
-     spock.style.backgroundColor = 'white'
+     paper.style.backgroundColor = ''
+     scissors.style.backgroundColor = ''
+     rock.style.backgroundColor = ''
+     spock.style.backgroundColor = ''
  }
  function fillChoiceSpock(){
      playerChoice.innerHTML = spock.innerHTML;
      spock.style.backgroundColor = 'yellow'
-     paper.style.backgroundColor = 'white'
-     scissors.style.backgroundColor = 'white'
-     lizard.style.backgroundColor = 'white'
-     rock.style.backgroundColor = 'white'
+     paper.style.backgroundColor = ''
+     scissors.style.backgroundColor = ''
+     lizard.style.backgroundColor = ''
+     rock.style.backgroundColor = ''
  }
  
  /**
@@ -140,15 +150,15 @@ document.getElementById('help-button').onclick = function(){
          alert('Please make a selection before clicking Shoot!');
      }else {
          playerChoice.innerHTML = '';
-         playerChoice.style.backgroundColor = 'white';
+         playerChoice.style.backgroundColor = '';
          compChoice.innerHTML = '';
-         compChoice.style.backgroundColor = 'white';
+         compChoice.style.backgroundColor = '';
          shoot.innerText = 'Shoot!'
-         rock.style.backgroundColor = 'white'
-         paper.style.backgroundColor = 'white'
-         scissors.style.backgroundColor = 'white'
-         lizard.style.backgroundColor = 'white'
-         spock.style.backgroundColor = 'white'
+         rock.style.backgroundColor = ''
+         paper.style.backgroundColor = ''
+         scissors.style.backgroundColor = ''
+         lizard.style.backgroundColor = ''
+         spock.style.backgroundColor = ''
  }
  }
  
@@ -295,6 +305,23 @@ document.getElementById('help-button').onclick = function(){
  }
 
  /**
-  * Win screen appears when player score equals 10
-  * or lose screen appears when lives equal 0
+  * Play again button resets the game
   */
+function playAgain() {
+    computerChoice();
+    document.getElementById('win-screen').style.visibility = 'hidden';
+    document.getElementById('lose-screen').style.visibility = 'hidden';
+    document.getElementById('lives').innerText = 'Choose';
+    document.getElementById('playerScore').innerText = '0';
+    document.getElementById('compScore').innerText = '0';
+    document.getElementById('rules').style.visibility = 'visible';
+    document.getElementById('easy-choice').style.backgroundColor = '';
+    document.getElementById('medium-choice').style.backgroundColor = '';
+    document.getElementById('hard-choice').style.backgroundColor = '';
+    document.getElementById('easy').style.backgroundColor = '';
+    document.getElementById('medium').style.backgroundColor = '';
+    document.getElementById('hard').style.backgroundColor = '';
+    document.getElementById('easy-choice').style.pointerEvents = 'auto';
+    document.getElementById('medium-choice').style.pointerEvents = 'auto';
+    document.getElementById('hard-choice').style.pointerEvents = 'auto';
+}
