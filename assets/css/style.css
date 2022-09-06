@@ -338,9 +338,9 @@ h1 {
 
 /* Computer selection area */
 #comp-choice {
-    position: absolute;
+    position: relative;
     top: 40%;
-    right: 25%;
+    left: 55%;
 }
 
 /* Label for computer selection area */
@@ -351,7 +351,7 @@ h1 {
 }
 
 /* Score tracker */
-.score-area {
+#score-area {
     position: absolute;
     top: 75%;
     left: 43%;
@@ -361,14 +361,14 @@ h1 {
 }
 
 /* Difficulty area div */
-.difficulty-area {
+#difficulty-area {
     height: 600px;
     float: right;
     width: 20%;
 }
 
 /* Easy, Medium, Hard difficulty table */
-.difficulty-tracker {
+#difficulty-tracker {
     border: 2px solid;
     width: 290px;
     transform: rotate(90deg);
@@ -410,4 +410,100 @@ table td {
     height: 100px;
     font-size: 3.2rem;
     margin: 0 30px;
+}
+
+/* Media Query for 1150px wide and down */
+
+@media screen and (max-width: 1150px) {
+    #my-choice {
+        left: 20%;
+    }
+
+    #computer {
+        right: 25%;
+    }
+
+    #rules {
+        left: 20%;
+    }
+}
+
+/* Media Query for 1000px wide and down */
+
+@media screen and (max-width: 1000px) {
+    #score-area {
+        left: 41%;
+    }
+}
+
+/* Media Query for 980px wide and down */
+
+@media screen and (max-width: 980px) {
+    #scissors {
+        right: 5%;
+    }
+
+    #my-choice {
+        left: 15%;
+    }
+
+    #rules {
+        left: 15%;
+    }
+}
+
+/* Media Query for 910px wide and down */
+
+@media screen and (max-width: 910px) {
+    #paper {
+        right: 5%;
+    }
+
+    #help-button {
+        top: 90%;
+    }
+
+    #rules {
+        left: 12%;
+    }
+}
+
+/* Media Query for 840px wide and down */
+
+@media screen and (max-width: 840px) {
+    #scissors {
+        right: 2%;
+    }
+
+    #computer {
+        right: 20%;
+    }
+
+    #rules {
+        left: 10%;
+    }
+}
+
+/* Media Query for 780px high and down */
+
+@media screen and (max-height: 780px) {
+    #rules {
+        top: 2%;
+    }
+}
+
+/* Media Query for 800px wide and down */
+
+@media screen and (max-width: 800px) {
+    #score-area, #help-button {
+        top: 95%;
+    }
+
+    #comp-choice {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 10px solid;
+    border-left: 0;
+    }
 }
