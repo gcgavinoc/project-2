@@ -157,14 +157,14 @@ h1 {
 }
 
 /* Lives left tracker area*/
-.lives-area {
+#lives-area {
     height: 600px;
     float: left;
     width: 20%;
 }
 
 /* Lives left text */
-.lives-area p {
+#lives-area p {
     border: 3px solid;
     font-size: 2rem;
     position: relative;
@@ -261,8 +261,8 @@ h1 {
     z-index: 1;
   }
   
-  #scissors:hover #scissors-tooltip {
-      visibility: visible;
+#scissors:hover #scissors-tooltip {
+    visibility: visible;
   }
 
 #lizard {
@@ -459,10 +459,6 @@ table td {
         right: 5%;
     }
 
-    #help-button {
-        top: 90%;
-    }
-
     #rules {
         left: 12%;
     }
@@ -495,15 +491,114 @@ table td {
 /* Media Query for 800px wide and down */
 
 @media screen and (max-width: 800px) {
-    #score-area, #help-button {
-        top: 95%;
+
+    h1 {
+        font-size: 1.8rem;
     }
 
-    #comp-choice {
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    border: 10px solid;
-    border-left: 0;
+    #help-button {
+        top: -6%;
+    }
+
+    #rules {
+        left: 5%;
+    }
+
+    #score-area {
+        top: 90%;
+        left: 38%;
+    }
+
+    #shoot {
+        top: 70%;
+    }
+
+    #paper, #scissors {
+        right: -20%;
+    }
+
+    #rock {
+        left: 35%;
+    }
+
+    #spock, #lizard {
+        left: -20%;
+    }
+
+    #difficulty-tracker {
+        transform: none;
+        font-size: 1rem;
+        width: 153px;
+        top: 80%;
+        right: 38%;
+    }
+
+    #lives-area p {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 6%;
+    left: 35%;
+    }
+
+    #lives {
+    font-size: 2rem;
+    position: absolute;
+    top: 9%;
+    left: 65%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    
+    #difficulty-tracker {
+        right: 35%;
+    }
+
+    #help-button {
+        top: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    #lives-area p {
+        top: 8%;
+        left: 25%;
+    }
+
+    #lives {
+        top: 11%;
+    }
+
+    #rock {
+        left: 25%;
+    }
+
+    #my-choice {
+        left: -10%;
+    }
+
+    #computer {
+        right: 2%;
+    }
+
+    #paper, #scissors {
+        right: -30%;
+    }
+
+    #spock, #lizard {
+        left: -30%;
+    }
+
+    #score-area {
+        left: 30%;
+    }
+
+    #difficulty-tracker {
+        right: 33%;
+    }
+
+    #shoot {
+        left: 42%;
     }
 }

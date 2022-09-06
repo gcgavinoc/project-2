@@ -40,7 +40,7 @@ window.onload = function(){
  * or alert if no difficulty selected
  */
 document.getElementById('play-button').onclick = function(){
-if (document.getElementById('lives').innerHTML !== 'Choose'){
+if (document.getElementById('lives').innerHTML !== 'X'){
     document.getElementById('rules').style.visibility = 'hidden';
 }else {
     alert('Please choose a difficulty')
@@ -326,7 +326,7 @@ function playAgain() {
     computerChoice();
     document.getElementById('win-screen').style.visibility = 'hidden';
     document.getElementById('lose-screen').style.visibility = 'hidden';
-    document.getElementById('lives').innerText = 'Choose';
+    document.getElementById('lives').innerText = 'X';
     document.getElementById('playerScore').innerText = '0';
     document.getElementById('compScore').innerText = '0';
     document.getElementById('rules').style.visibility = 'visible';
