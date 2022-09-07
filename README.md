@@ -44,16 +44,16 @@ You can access the live site here [here](https://gcgavinoc.github.io/project-2/)
 # Project Screenshots
 [Go to top](#table-of-contents)
 
-### Rules Window
+### **Rules Window**
 ![Image showing what the game looks like with the rules window visible](assets/images/readme-images/rules-screenshot.png)
 
-### Game
+### **Game**
 ![Image showing the game itself](assets/images/readme-images/game-screenshot.png)
 
-### Win Screen
+### **Win Screen**
 ![Image showing what the game looks like when the player wins](assets/images/readme-images/win-screenshot.png)
 
-### Lose Screen
+### **Lose Screen**
 ![Image showing what the game looks like when the player loses](assets/images/readme-images/lose-screenshot.png)
 
 # User Experience (UX) Design
@@ -86,11 +86,11 @@ The background of the site consists of a looping video, which adds a certain dyn
 ## Site Skeleton
 [Go to top](#table-of-contents)
 
-### Desktop
+### **Desktop**
 
 ![Image of a Balsamiq Wireframe for the desktop version of the game](assets/images/readme-images/desktop-wireframe.png)
 
-### Mobile
+### **Mobile**
 
 ![Image of a Balsamiq Wireframe for the mobile version of the game](assets/images/readme-images/mobile-wireframe.png)
 
@@ -165,3 +165,140 @@ When the players lives reach 0, the lose screen will appear. This consists of a 
 [Go to top](#table-of-contents)
 
 This tool can be accessed by right clicking on a website and clicking on inspect in the menu that appears. I used this tool to check the responsiveness of the site by changing the size of the window that the site appears in. I checked all screen sizes by reducing the width of the screen and adding media queries to the CSS file for every element that appeared incorrectly on the different sizes. I also utilized the dev tools 'lighthouse' feature in order to generate a report that provides a score on the sites Performance, Accessibility, Best practices, and SEO. This report is displayed below.
+
+![Image showing the lighthouse report generated via Chrome Dev tools](assets/images/readme-images/lighthouse-report.png)
+
+## Am I Responsive
+[Go to top](#table-of-contents)
+
+This tool was used to check if the site was responsive for desktop, laptop, tablet, and mobile screen sizes. The site generates an image showing what the site will look like on each device type.
+
+![Image displaying the game using the Am I Responsive tool]()
+
+## W3C Validator tools
+[Go to top](#table-of-contents)
+
+This tool was used to validate the HTML and CSS code used across the site. The code was entered into the tool using the direct input option. If there are any issues with the code, this tool will indicate as such by briefly describing the issue and then pointing to where the issue appears in the code along with a display of a snippet of the code in question and the problem highlighted.
+
+### **HTML Code**
+Upon entering my HTML code into the W3C validator, I was presented with a few errors. The first was related to the rules screen, whereby I had the list of rules in an unordered list. However, the error was that the ul element contained text which I was using as the heading for the list of rules. The second error was related to some properties belonging to the gifs I had imported to from Giphy. They stated that using 100% for the height and width properties was not valid. The last error was that I had an id on used on two different elements.
+
+![Image showing HTML code entered into the W3C HTML validator tool with errors](assets/images/readme-images/W3C-HTML-Validator-Errors.png)
+
+In order to fix these errors, I removed the text in the ul element and instead created a p element above it to include the text for the rules heading. Then I moved the style properties from the HTML file to the CSS file for the gifs. Lastly I changed the ID that was used twice into a class.
+
+![Image showing the HTML code entered into the W3C HTML validator tool with no errors]()
+
+### **CSS Code**
+Upon entering my CSS code into the W3C CSS validator, no errors were found.
+
+![Image showing CSS code entered into the W3C CSS validator tool](assets/images/readme-images/W3C-CSS-Validator.png)
+
+### **Javascript Code**
+
+![Image showing Javascript code entered into the JS Hint validator tool]()
+
+## Manual Testing
+
+[Go to top](#table-of-contents)
+
+The site was tested on the following screen sizes:
+1600px wide
+1400px wide
+1000px wide
+980px wide
+910px wide
+840px wide
+780px wide
+650px wide
+500px wide
+350 px wide
+
+Please find below the results of manually testing each feature across the above mentioned screen sizes.
+
+### **Rules**
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Text and Icons | All rules text and Font Awesome Icons loaded fully and correctly. | PASS
+Difficulty selection buttons | On mouse hover, the easy difficulty button turned green, the medium button turned orange and the hard button turned red. Each difficulty button changed from white to it's corresponding color on click, and the lives area on the game screen changed to the number of lives associated with the button clicked. The difficulty tracker on the right side also changed the background color of the selected difficulty to it's corresponding color. If a different difficulty was selected, the color of the difficulty button that was previously clicked turned back to white. If the rules window was opened using the help button, the difficulty selection buttons became unclickable. | PASS
+Play button | The play button turned from white to yellow on mouse hover, and hid the rules window on click. If the play button was clicked before a difficulty was selected, an alert message appeared reminding the player to select a difficulty | PASS
+|||
+
+### **The Game**
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Game selection buttons | The game selection buttons, Rock, Paper, Scissors, Lizard, Spock, all had a zoom effect on mouse hover, as well as a tooltip that appeared stating the rules for which other selection that selection beat. On click, they turned yellow. If a different selection button was clicked, the previous selection button that was clicked turned back to white. The icon of the button that was clicked appeared in the player choice area. | PASS
+Shoot button | When the shoot button was clicked, if there was no player selection made, an alert appeared reminding the player to do so. If a selection was made, then the computer choice area was filled with the icon of a random selection. The winners selectin area turned green while the losers turned red. Both areas turned yellow if the result was a tie. The Player score and Computer score tracker incremented appropriately and the lives tracker decremented if the computer won. The text on the shoot button turned from 'Shoot!' to 'Reset!'. If a selection button was clicked while the shoot button said 'Reset!' then an alert appeared reminding the player to click the reset button. Once the reset button was clicked it's text changed back to 'Shoot!', the two selection areas were cleared of their icons and turned back to white and the selected button turned back from yellow to white. | PASS
+Help button | Upon clicking the help button, the rules screen appeared. The initially selected difficulty was still selected and none of the difficulty selection buttons were clickable. The Play button closed the rules window again on click. | PASS
+|||
+
+### **Win and Lose**
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Gifs | The gifs loaded correctly and played correctly once the player score reached 10, or the lives counter reached 0. | PASS
+Play Again button | The play again button appeared correctly under the gifs. It turned from white to yellow on mouse hover. On click, it reset the score tracker and lives tracker by replacing the lives with an X symbol. All selected buttons and areas turned back to white. The selected difficulty in the difficulty tracker turned back to white. The rules screen appeared again, and the difficulty buttons were not selected and had turned back to white. They were clickable again, regained their on hover functionality and changed to the appropriate color on click, changing the lives tracker and difficulty tracker correctly as well. The play button closed the rules window correctly. All functions and mechanics worked correctly as stated above even after the play again button was clicked and everything was reset. | PASS
+|||
+
+### **Video Background**
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Video Background load | The video background loads and autoplays correctly and instantly on page load across all three pages and all screen sizes| PASS
+Video loop | The video background loops correcly and smoothly across all three pages and all screen sizes with no interruption between loop cycles| PASS
+Video screen size fit | The video background fits correctly on all screen sizes for all three pages. The video background covers the whole page with no gaps or margins and does not appear stretched or compacted on different screen sizes| PASS
+|||
+
+# Bugs
+
+[Go to top](#table-of-contents)
+
+## Solved Bugs
+ - The main bugs I encountered while creating this game were to do with clicking buttons that the player should not be allowed to click at certain times. The first bug occured after the player had selected their difficulty and clicked the play button, closing the rules window, if they clicked the help button to re-open the rules window they were able to click a difficulty selection button again and give themselves more lives, thereby ensuring they would never lose the game. I fixed this bug by making the difficulty selection buttons unclickable if the rules window was opened using the help button. This was done via Javascript.
+
+ - The second bug occurred when the player clicked the shoot button before making a selection. This caused the computer selection area to fill. This had no negative repercussions on the game, but was a bad user experience. Therefore I added an alert message if the shoot button was clicked while no player selection was made.
+
+ - The third bug occurred after the shoot button had been clicked. The player was able to click other selections and fill their selection area with those other selections. Again this had no negative repercussions on the game itself but was a bad user experience. Users could say the game was broken by clicking shoot, seeing the winner and then changing their selection to make it look as though they lost when they should have won or vice versa. I fixed this bug by adding an alert message if a selection was clicked before the reset button was clicked.
+
+# Deployment
+
+[Go to top](#table-of-contents)
+
+The site was deployed to GitHub pages using the following steps:
+
+1. Navigate to Github - (https://github.com/)
+
+2. Sign up to GitHub.
+
+3. Create a new repository on GitHub called project-2.
+
+4. Click on settings on the navigation bar under the repository title.
+
+5. Select the pages tab on the left side menu bar.
+
+6. Under source, click on the branch drop down menu, select main and click save.
+
+7. The site will then deploy, which may take a few moments.
+
+8. Once it has deployed the page will refresh with the message "Your site is published at" accompanied by a live page link.
+
+The live link can be found here - (https://gcgavinoc.github.io/project-2/)
+
+# Acknowledgements
+
+[Go to top](#table-of-contents)
+
+- The initial structure of the Score tracker, and Style of the selection buttons was borrowed from the Love Maths project
+- How to add two functions to an event listener was learned from https://stackoverflow.com/questions/25028853/addeventlistener-two-functions
+- How to decide a winner in a game of Rock, Paper, Scissors was learned from https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/
+- How to have the computer select a random choice was learned from https://www.youtube.com/watch?v=n1_vHArDBRA&list=WL&index=26&t=333s&ab_channel=BroCode
+- How to create a tooltip was learned from https://www.w3schools.com/css/css_tooltip.asp
+- Inspiration for the README.md file structure was taken from https://github.com/dhakal79/Portfolio-project-MS1
+- The font used for the site was taken from [Google Fonts](https://fonts.google.com/).
+- The various icons used for the site were taken from [Font Awesome](https://fontawesome.com/).
+- The Video Background was downloaded from [Pexels](https://www.pexels.com/).
+- The Gifs were sourced from [Giphy](https://giphy.com/)
+- The initial CSS code for the video background was borrowed from [Stack Overflow](https://stackoverflow.com/questions/49963974/how-to-add-background-video-to-html-page).
+- Thanks to my mentor Marcel Mulders for his constructive feedback and guidance during the development of this project.

@@ -28,19 +28,20 @@
     <!-- Rules window -->
     <div id="rules">
         <h2>Welcome to Rock, Paper, Scissors, Lizard, Spock!</h2>
-        <ul id="the-rules">The Rules:</ul>
-            <li>Beat the computer 10 times before you run out of lives!</li>
-            <li>Everytime the computer wins you lose a life!</li>
-            <li><i class="fa-regular fa-hand-back-fist"></i> smashes <i class="fa-regular fa-hand-scissors"></i></li>
-            <li><i class="fa-regular fa-hand"></i> covers <i class="fa-regular fa-hand-back-fist"></i></li>
-            <li><i class="fa-regular fa-hand-scissors"></i> cuts <i class="fa-regular fa-hand"></i></li>
-            <li><i class="fa-regular fa-hand-lizard"></i> poisons <i class="fa-regular fa-hand-spock"></i></li>
-            <li><i class="fa-regular fa-hand-spock"></i> breaks <i class="fa-regular fa-hand-scissors"></i></li>
-            <li><i class="fa-regular fa-hand-back-fist"></i> crushes <i class="fa-regular fa-hand-lizard"></i></li>
-            <li><i class="fa-regular fa-hand"></i> disproves <i class="fa-regular fa-hand-spock"></i></li>
-            <li><i class="fa-regular fa-hand-scissors"></i> decapitates <i class="fa-regular fa-hand-lizard"></i></li>
-            <li><i class="fa-regular fa-hand-lizard"></i> eats <i class="fa-regular fa-hand"></i></li>
-            <li><i class="fa-regular fa-hand-spock"></i> vaporizes <i class="fa-regular fa-hand-back-fist"></i></li>
+        <p>The Rules:</p>
+            <ul id="the-rules"></ul>
+                <li>Beat the computer 10 times before you run out of lives!</li>
+                <li>Everytime the computer wins you lose a life!</li>
+                <li><i class="fa-regular fa-hand-back-fist"></i> smashes <i class="fa-regular fa-hand-scissors"></i></li>
+                <li><i class="fa-regular fa-hand"></i> covers <i class="fa-regular fa-hand-back-fist"></i></li>
+                <li><i class="fa-regular fa-hand-scissors"></i> cuts <i class="fa-regular fa-hand"></i></li>
+                <li><i class="fa-regular fa-hand-lizard"></i> poisons <i class="fa-regular fa-hand-spock"></i></li>
+                <li><i class="fa-regular fa-hand-spock"></i> breaks <i class="fa-regular fa-hand-scissors"></i></li>
+                <li><i class="fa-regular fa-hand-back-fist"></i> crushes <i class="fa-regular fa-hand-lizard"></i></li>
+                <li><i class="fa-regular fa-hand"></i> disproves <i class="fa-regular fa-hand-spock"></i></li>
+                <li><i class="fa-regular fa-hand-scissors"></i> decapitates <i class="fa-regular fa-hand-lizard"></i></li>
+                <li><i class="fa-regular fa-hand-lizard"></i> eats <i class="fa-regular fa-hand"></i></li>
+                <li><i class="fa-regular fa-hand-spock"></i> vaporizes <i class="fa-regular fa-hand-back-fist"></i></li>
         <p>Choose how many lives you want to start the game with:</p>
         <p id="easy-label">Easy</p><p id="medium-label">Medium</p><p id="hard-label">Hard</p>
         <button class="difficulty-button" id="easy-choice">20</button>
@@ -51,13 +52,13 @@
     </div>
     <!-- Win screen -->
     <div id="win-screen">
-        <iframe src="https://giphy.com/embed/ToMjGpyO2OVfPLpoxu8" width="100%" height="100%" style="position:relative" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-        <button onclick="playAgain()" id="play-again">Play Again!</button>
+        <iframe src="https://giphy.com/embed/ToMjGpyO2OVfPLpoxu8" class="giphy-embed" allowFullScreen></iframe>
+        <button onclick="playAgain()" class="play-again-button">Play Again!</button>
     </div>
     <!-- Lose screen -->
     <div id="lose-screen">
-        <iframe src="https://giphy.com/embed/eJ4j2VnYOZU8qJU3Py" width="100%" height="100%" style="position:relative" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-        <button onclick="playAgain()" id="play-again">Play Again!</button>
+        <iframe src="https://giphy.com/embed/eJ4j2VnYOZU8qJU3Py" class="giphy-embed" allowFullScreen></iframe>
+        <button onclick="playAgain()" class="play-again-button">Play Again!</button>
     </div>
     <!-- Lives left tracker -->
     <div id="lives-area">
@@ -69,9 +70,11 @@
         <div id="difficulty-tracker">
             <table>
                 <tbody>
-                    <td id="easy">Easy</td>
-                    <td id="medium">Medium</td>
-                    <td id="hard">Hard</td>
+                    <tr>
+                        <td id="easy">Easy</td>
+                        <td id="medium">Medium</td>
+                        <td id="hard">Hard</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
