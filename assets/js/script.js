@@ -9,7 +9,7 @@ document.getElementById('easy-choice').onclick = function(){
     document.getElementById('easy').style.backgroundColor = 'green';
     document.getElementById('medium').style.backgroundColor = '';
     document.getElementById('hard').style.backgroundColor = '';
-}
+};
 document.getElementById('medium-choice').onclick = function(){
     document.getElementById('lives').innerHTML = '15';
     document.getElementById('medium-choice').style.backgroundColor = 'orange';
@@ -18,7 +18,7 @@ document.getElementById('medium-choice').onclick = function(){
     document.getElementById('medium').style.backgroundColor = 'orange';
     document.getElementById('easy').style.backgroundColor = '';
     document.getElementById('hard').style.backgroundColor = '';
-}
+};
 document.getElementById('hard-choice').onclick = function(){
     document.getElementById('lives').innerHTML = '10';
     document.getElementById('hard-choice').style.backgroundColor = 'red';
@@ -27,13 +27,13 @@ document.getElementById('hard-choice').onclick = function(){
     document.getElementById('hard').style.backgroundColor = 'red';
     document.getElementById('easy').style.backgroundColor = '';
     document.getElementById('medium').style.backgroundColor = '';
-}
+};
 /**
  * Make rules window visible on page load
  */
 window.onload = function(){
     document.getElementById('rules').style.visibility = 'visible';
-}
+};
 
 /**
  * Hide rules window after play button click
@@ -43,9 +43,9 @@ document.getElementById('play-button').onclick = function(){
 if (document.getElementById('lives').innerHTML !== 'X'){
     document.getElementById('rules').style.visibility = 'hidden';
 }else {
-    alert('Please choose a difficulty')
+    alert('Please choose a difficulty');
 }
-}
+};
 
 /**
  * Make rules window visible on help button click
@@ -55,7 +55,7 @@ document.getElementById('help-button').onclick = function(){
     document.getElementById('easy-choice').style.pointerEvents = 'none';
     document.getElementById('medium-choice').style.pointerEvents = 'none';
     document.getElementById('hard-choice').style.pointerEvents = 'none';
-}
+};
 
 /**
  * Function for putting selection choice into player selection area
@@ -75,57 +75,57 @@ document.getElementById('help-button').onclick = function(){
  
  function fillChoiceRock(){
   if(shoot.innerHTML == 'Shoot!') {playerChoice.innerHTML = rock.innerHTML;
-     rock.style.backgroundColor = 'yellow'
-     paper.style.backgroundColor = ''
-     scissors.style.backgroundColor = ''
-     lizard.style.backgroundColor = ''
-     spock.style.backgroundColor = ''
+     rock.style.backgroundColor = 'yellow';
+     paper.style.backgroundColor = '';
+     scissors.style.backgroundColor = '';
+     lizard.style.backgroundColor = '';
+     spock.style.backgroundColor = '';
  }else {
-    alert('Please click Reset!')
+    alert('Please click Reset!');
  }
 }
  function fillChoicePaper(){
     if(shoot.innerHTML == 'Shoot!') {playerChoice.innerHTML = paper.innerHTML;
-     paper.style.backgroundColor = 'yellow'
-     rock.style.backgroundColor = ''
-     scissors.style.backgroundColor = ''
-     lizard.style.backgroundColor = ''
-     spock.style.backgroundColor = ''
+     paper.style.backgroundColor = 'yellow';
+     rock.style.backgroundColor = '';
+     scissors.style.backgroundColor = '';
+     lizard.style.backgroundColor = '';
+     spock.style.backgroundColor = '';
  }else {
-    alert('Please click Reset!')
+    alert('Please click Reset!');
  }
 }
  function fillChoiceScissors(){
     if(shoot.innerHTML == 'Shoot!') {playerChoice.innerHTML = scissors.innerHTML;
-     scissors.style.backgroundColor = 'yellow'
-     paper.style.backgroundColor = ''
-     rock.style.backgroundColor = ''
-     lizard.style.backgroundColor = ''
-     spock.style.backgroundColor = ''
+     scissors.style.backgroundColor = 'yellow';
+     paper.style.backgroundColor = '';
+     rock.style.backgroundColor = '';
+     lizard.style.backgroundColor = '';
+     spock.style.backgroundColor = '';
  }else {
-    alert('Please click Reset!')
+    alert('Please click Reset!');
  }
 }
  function fillChoiceLizard(){
     if(shoot.innerHTML == 'Shoot!') {playerChoice.innerHTML = lizard.innerHTML;
-     lizard.style.backgroundColor = 'yellow'
-     paper.style.backgroundColor = ''
-     scissors.style.backgroundColor = ''
-     rock.style.backgroundColor = ''
-     spock.style.backgroundColor = ''
+     lizard.style.backgroundColor = 'yellow';
+     paper.style.backgroundColor = '';
+     scissors.style.backgroundColor = '';
+     rock.style.backgroundColor = '';
+     spock.style.backgroundColor = '';
  }else {
-    alert('Please click Reset!')
+    alert('Please click Reset!');
  }
 }
  function fillChoiceSpock(){
     if(shoot.innerHTML == 'Shoot!') {playerChoice.innerHTML = spock.innerHTML;
-     spock.style.backgroundColor = 'yellow'
-     paper.style.backgroundColor = ''
-     scissors.style.backgroundColor = ''
-     lizard.style.backgroundColor = ''
-     rock.style.backgroundColor = ''
+     spock.style.backgroundColor = 'yellow';
+     paper.style.backgroundColor = '';
+     scissors.style.backgroundColor = '';
+     lizard.style.backgroundColor = '';
+     rock.style.backgroundColor = '';
  }else {
-    alert('Please click Reset!')
+    alert('Please click Reset!');
  }
 }
  
@@ -141,7 +141,7 @@ document.getElementById('help-button').onclick = function(){
  function computerChoice() {
      if(shoot.innerText == 'Shoot!' && playerChoice.innerHTML !== ''){
  
-     shoot.innerText = 'Reset!'
+     shoot.innerText = 'Reset!';
      const randNum = Math.floor(Math.random() * 5) + 1;
  
      switch(randNum){
@@ -168,12 +168,12 @@ document.getElementById('help-button').onclick = function(){
          playerChoice.style.backgroundColor = '';
          compChoice.innerHTML = '';
          compChoice.style.backgroundColor = '';
-         shoot.innerText = 'Shoot!'
-         rock.style.backgroundColor = ''
-         paper.style.backgroundColor = ''
-         scissors.style.backgroundColor = ''
-         lizard.style.backgroundColor = ''
-         spock.style.backgroundColor = ''
+         shoot.innerText = 'Shoot!';
+         rock.style.backgroundColor = '';
+         paper.style.backgroundColor = '';
+         scissors.style.backgroundColor = '';
+         lizard.style.backgroundColor = '';
+         spock.style.backgroundColor = '';
  }
  }
  
@@ -320,7 +320,7 @@ document.getElementById('help-button').onclick = function(){
  }
 
  /**
-  * Play again button resets the game
+  * Clicking the Play Again button resets the game
   */
 function playAgain() {
     computerChoice();

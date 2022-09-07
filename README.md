@@ -180,18 +180,18 @@ This tool was used to check if the site was responsive for desktop, laptop, tabl
 This tool was used to validate the HTML and CSS code used across the site. The code was entered into the tool using the direct input option. If there are any issues with the code, this tool will indicate as such by briefly describing the issue and then pointing to where the issue appears in the code along with a display of a snippet of the code in question and the problem highlighted.
 
 ### **HTML Code**
-Upon entering my HTML code into the W3C validator, I was presented with a few errors. The first was related to the rules screen, whereby I had the list of rules in an unordered list. However, the error was that the ul element contained text which I was using as the heading for the list of rules. The second error was related to some properties belonging to the gifs I had imported to from Giphy. They stated that using 100% for the height and width properties was not valid. The last error was that I had an id on used on two different elements.
+Upon entering my HTML code into the W3C validator, I was presented with a few errors. The first was related to the rules screen, whereby I had the list of rules in an unordered list. However, the error was that the ul element contained text which I was using as the heading for the list of rules. The closing ul tag was also in the wrong place. The second error was related to some properties belonging to the gifs I had imported to from Giphy. They stated that using 100% for the height and width properties was not valid. The last error was that I had an id on used on two different elements.
 
-![Image showing HTML code entered into the W3C HTML validator tool with errors](assets/images/readme-images/W3C-HTML-Validator-Errors.png)
+![Image showing HTML code entered into the W3C HTML validator tool with errors](assets/images/readme-images/w3c-html-validator-Errors.png)
 
-In order to fix these errors, I removed the text in the ul element and instead created a p element above it to include the text for the rules heading. Then I moved the style properties from the HTML file to the CSS file for the gifs. Lastly I changed the ID that was used twice into a class.
+In order to fix these errors, I removed the text in the ul element and instead created a p element above it to include the text for the rules heading, as well as moving the closing ul tag to beneath the li elements. Then I moved the style properties for the gifs from the HTML file to the CSS file. Lastly I changed the ID that was used twice into a class.
 
-![Image showing the HTML code entered into the W3C HTML validator tool with no errors]()
+![Image showing the HTML code entered into the W3C HTML validator tool with no errors](assets/images/readme-images/w3c-html-validator-fixed.png)
 
 ### **CSS Code**
 Upon entering my CSS code into the W3C CSS validator, no errors were found.
 
-![Image showing CSS code entered into the W3C CSS validator tool](assets/images/readme-images/W3C-CSS-Validator.png)
+![Image showing CSS code entered into the W3C CSS validator tool](assets/images/readme-images/w3c-css-validator.png)
 
 ### **Javascript Code**
 
