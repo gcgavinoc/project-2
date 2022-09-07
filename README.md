@@ -20,11 +20,10 @@ You can access the live site here [here](https://gcgavinoc.github.io/project-2/)
  - [Site Skeleton](#site-skeleton)
 
 [Features](#features)
- - [Navigation bar](#navigation-bar)
- - [About Me page](#about-me-page-1)
- - [My History page](#my-history-page-1)
- - [Contact Form](#contact-form)
- - [Social Media Links](#social-media-links)
+ - [Rules](#rules)
+ - [The Game](#the-game)
+ - [Win Screen](#win-screen-1)
+ - [Lose Screen](#lose-screen-1)
 
 [Technologies used](#technologies-used)
 
