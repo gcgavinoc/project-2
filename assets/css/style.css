@@ -44,12 +44,12 @@ h1 {
     border: 2px solid;
     font-size: 1.2rem;
     padding: 2px 10px 2px;
-    list-style: none;
 }
 
 #the-rules {
     position: relative;
     right: 3%;
+    list-style: none;
 }
 
 #easy-label {

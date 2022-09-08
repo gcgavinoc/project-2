@@ -194,8 +194,9 @@ Upon entering my CSS code into the W3C CSS validator, no errors were found.
 ![Image showing CSS code entered into the W3C CSS validator tool](assets/images/readme-images/w3c-css-validator.png)
 
 ### **Javascript Code**
+Upon entering my Javascript code into the JS Hint tool, no errors were found.
 
-![Image showing Javascript code entered into the JS Hint validator tool]()
+![Image showing Javascript code entered into the JS Hint validator tool](assets/images/readme-images/jshint.png)
 
 ## Manual Testing
 
