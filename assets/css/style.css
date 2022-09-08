@@ -709,3 +709,36 @@ table td {
         left: 20%;
     }
 }
+
+@media screen and (max-width: 320px) {
+    
+    #rules {
+        left: 2%;
+    }
+
+    #comp-choice {
+        left: 48%;
+    }
+
+    #rock {
+        left: 18%;
+    }
+
+    #paper, #scissors {
+        right: -40%;
+    }
+
+    #difficulty-tracker {
+        top: 68%;
+        right: 22%;
+    }
+
+    #score-area {
+        top: 75%;
+        left: 23%;
+    }
+
+    #help-button {
+        top: 75%;
+    }
+}
