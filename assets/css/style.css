@@ -732,6 +732,10 @@ table td {
         right: -40%;
     }
 
+    #shoot {
+        left: 39%;
+    }
+
     #difficulty-tracker {
         top: 68%;
         right: 22%;
