@@ -37,7 +37,7 @@ h1 {
 #rules {
     visibility: hidden;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     left: 25%;
     top: 12%;
     background-color: white;
@@ -216,7 +216,7 @@ h1 {
   border-radius: 6px;
   position: absolute;
   top: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 #rock:hover #rock-tooltip {
@@ -240,7 +240,7 @@ h1 {
     border-radius: 6px;
     position: absolute;
     top: 100%;
-    z-index: 1;
+    z-index: 2;
   }
   
   #paper:hover #paper-tooltip {
@@ -264,7 +264,7 @@ h1 {
     border-radius: 6px;
     position: absolute;
     top: 100%;
-    z-index: 1;
+    z-index: 2;
   }
   
 #scissors:hover #scissors-tooltip {
@@ -288,7 +288,7 @@ h1 {
     border-radius: 6px;
     position: absolute;
     top: 100%;
-    z-index: 1;
+    z-index: 2;
   }
   
   #lizard:hover #lizard-tooltip {
@@ -312,7 +312,7 @@ h1 {
     border-radius: 6px;
     position: absolute;
     top: 100%;
-    z-index: 1;
+    z-index: 2;
   }
   
   #spock:hover #spock-tooltip {
@@ -647,7 +647,7 @@ table td {
 
 @media screen and (max-width: 375px) {
     #rules {
-        left: 5%;
+        left: 8%;
     }
 
     #play-button {
