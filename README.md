@@ -7,7 +7,7 @@ The game is intended to be fun to play with a visual flair and clarity to ensure
 
 You can access the live site here [here](https://gcgavinoc.github.io/project-2/).
 
-![Image of site](assets/images/readme-images/game-screenshot.png)
+![Image of site](assets/images/readme-images/am-i-responsive.png)
 
 # Table of Contents
 [Project Screenshots](#project-screenshots)
@@ -172,7 +172,7 @@ This tool can be accessed by right clicking on a website and clicking on inspect
 
 This tool was used to check if the site was responsive for desktop, laptop, tablet, and mobile screen sizes. The site generates an image showing what the site will look like on each device type.
 
-![Image displaying the game using the Am I Responsive tool]()
+![Image displaying the game using the Am I Responsive tool](assets/images/readme-images/am-i-responsive.png)
 
 ## W3C Validator tools
 [Go to top](#table-of-contents)
@@ -261,6 +261,9 @@ Video screen size fit | The video background fits correctly on all screen sizes 
  - The second bug occurred when the player clicked the shoot button before making a selection. This caused the computer selection area to fill. This had no negative repercussions on the game, but was a bad user experience. Therefore I added an alert message if the shoot button was clicked while no player selection was made.
 
  - The third bug occurred after the shoot button had been clicked. The player was able to click other selections and fill their selection area with those other selections. Again this had no negative repercussions on the game itself but was a bad user experience. Users could say the game was broken by clicking shoot, seeing the winner and then changing their selection to make it look as though they lost when they should have won or vice versa. I fixed this bug by adding an alert message if a selection was clicked before the reset button was clicked.
+
+ ## Unsolved Bugs
+ - At smaller screen sizes, 400px wide and below, a white margin appears to the right and bottom of the screen. The likely cause of this issue is that some of the elements of the site are using a relative position property as opposed to an absolute position property. In order to correctly test this theory and work to resolve the bug, I would need to completely change the position properties of my site and rebuild the layout from scratch. Unfortunately this bug was discovered late into the project timeline and therefore there was an insufficient amount of time left to make this drastic change before the deadline submission date. What I have learned from this bug however, is that in future I should create projects with a mobile first approach. That is to say, build the layout of the site based on the size parameters of a smaller screen size like that of a mobile phone device. Then as the screen widens, the elements on the site will not be shifted, changed, or affected to the same extent that they were with my desktop first approach here. I plan to return to this project at a future date and make this change.
 
 # Deployment
 
