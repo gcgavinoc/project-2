@@ -507,7 +507,12 @@ table td {
     }
 
     #rules {
-        left: 5%;
+        left: 20%;
+        font-size: 0.8rem;
+    }
+
+    #easy-label, #hard-label {
+        top: 59%;
     }
 
     #score-area {
@@ -563,9 +568,23 @@ table td {
     #help-button {
         top: 90%;
     }
+
+    #rules {
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #rules {
+        left: 5%;
+    }
 }
 
 @media screen and (max-width: 500px) {
+
+    #rules {
+        left: 1%;
+    }
     
     #lives-area p {
         top: 8%;
@@ -606,5 +625,87 @@ table td {
 
     #shoot {
         left: 42%;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    #rules {
+        font-size: 0.5rem;
+        left: 15%;
+    }
+
+    #easy-label {
+        top: 51%;
+        left: 15%;
+    }
+
+    #hard-label {
+        top: 51%;
+        right: 15%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #rules {
+        left: 5%;
+    }
+
+    #play-button {
+        left: 38%;
+    }
+
+    #lives-area p {
+        left: 15%;
+    }
+
+    .selection, .selected {
+        width: 80px;
+        height: 80px;
+        border: 5px solid;
+    }
+
+    #my-choice {
+        top: 25%;
+    }
+
+    #comp-choice {
+        top: 25%;
+    }
+
+    #scissors, #lizard {
+        bottom: 40%;
+    }
+
+    #you {
+        top: 40%;
+        left: 18%;
+    }
+
+    #computer {
+        top: 40%;
+        right: -5%;
+    }
+
+    #shoot {
+        top: 48%;
+    }
+
+    #difficulty-tracker {
+        top: 65%;
+        right: 30%;
+    }
+
+    #score-area {
+        top: 70%;
+        left: 25%;
+    }
+
+    #help-button {
+        top: 70%;
+    }
+
+    #win-screen, #lose-screen {
+        top: 10%;
+        left: 20%;
     }
 }
